@@ -2,6 +2,7 @@ package org.example.alquilervehiculos.service;
 
 
 import lombok.Getter;
+import org.example.alquilervehiculos.models.AbstractVehicle;
 import org.example.alquilervehiculos.models.TypeUsers;
 import org.example.alquilervehiculos.models.User;
 import org.springframework.stereotype.Service;
@@ -44,6 +45,9 @@ public class UserManagementServices {
         }
         return null; // No se encontró ningún usuario que coincida
     }
+
+
+
 
 
 }

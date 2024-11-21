@@ -4,8 +4,8 @@ public class Van extends AbstractVehicle {
 
     private short capacity;
 
-    public Van(String typeVehicle, String tuition, int km, boolean status, double rentalValue, short capacity) {
-        super(typeVehicle, tuition, km, status, rentalValue);
+    public Van(String typeVehicle, String tuition, int km, boolean status, double rentalValue, short capacity, String color) {
+        super(typeVehicle, tuition, km, status, rentalValue, color);
         this.capacity = capacity;
         super.setTypeVehicle("Van");
     }

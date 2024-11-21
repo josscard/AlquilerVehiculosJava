@@ -13,14 +13,16 @@ public abstract class AbstractVehicle implements VehiculoAble{
     private int km; //Kilometros
     private boolean status; //Estado
     private double rentalValue; //Valor alquiler
+    private String color; //Color vehiculo
 
 
-    public AbstractVehicle(String typeVehicle, String tuition, int km, boolean status, double rentalValue) {
+    public AbstractVehicle(String typeVehicle, String tuition, int km, boolean status, double rentalValue, String color ) {
         TypeVehicle = typeVehicle;
         this.tuition = tuition;
         this.km = km;
         this.status = status;
         this.rentalValue = rentalValue;
+        this.color = color;
     }
 
     public AbstractVehicle() {

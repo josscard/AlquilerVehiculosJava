@@ -8,8 +8,8 @@ public class Car extends AbstractVehicle {
     private boolean extras;
 
 
-    public Car(String typeVehicle, String tuition, int km, boolean status, double rentalValue, boolean extras) {
-        super(typeVehicle, tuition, km, status, rentalValue);
+    public Car(String typeVehicle, String tuition, int km, boolean status, double rentalValue, boolean extras, String color) {
+        super(typeVehicle, tuition, km, status, rentalValue, color);
         this.extras = extras;
         super.setTypeVehicle("Car"); //para obligar a que el tipo sea predeterminado
     }

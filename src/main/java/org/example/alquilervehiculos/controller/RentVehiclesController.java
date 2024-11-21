@@ -141,6 +141,13 @@ public class RentVehiclesController {
     }
 
 
+    @GetMapping("/get-vehicle-by-color")
+    public VehicleByColorDTO getVehiclesByColor(@RequestParam String color) {
+        List<AbstractVehicle> vehicle = vehicleManagementService.getVehiclesByColor(color);
+        return new VehicleByColorDTO(color, vehicle);
+    }
+
+
 
 
 

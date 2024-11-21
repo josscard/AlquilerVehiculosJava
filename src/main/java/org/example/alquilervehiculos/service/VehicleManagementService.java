@@ -13,11 +13,28 @@ public class VehicleManagementService {
     private List<AbstractVehicle> listVehicles = new ArrayList<>();
     private List<RentVehicle> rentVehicles = new ArrayList<>();
 
+
+    // Colores html para los vehiculos
+    /*IndianRed	#CD5C5C
+    LightCoral	#F08080
+    Salmon	#FA8072
+    DarkSalmon	#E9967A
+    LightSalmon	#FFA07A*/
+
     // Crear vehículos predeterminados
         public VehicleManagementService() {
-            listVehicles.add(new Motorbike("Motorbike","MOTO123", 1000, true, 250000, true));
-            listVehicles.add(new Car("Car","COCHE456", 20000, false, 362000, true));
-            listVehicles.add(new Van("Van","FURG789", 5000, true, 50200, (short)200));
+            listVehicles.add(new Motorbike("Motorbike","MOTO123", 1000, true, 250000, true,"#E9967A"));
+            listVehicles.add(new Motorbike("Motorbike","MOTO345", 3200, true, 366666, true,"#FA8072"));
+            listVehicles.add(new Motorbike("Motorbike","MOTO896", 500, true, 125844, true,"#F08080"));
+
+            listVehicles.add(new Car("Car","COCHE456", 20000, false, 362000, true, "#CD5C5C"));
+            listVehicles.add(new Car("Car","COCHE300", 20000, false, 362000, true, "#FA8072"));
+            listVehicles.add(new Car("Car","COCHE280", 20000, false, 362000, true, "#CD5C5C"));
+
+            listVehicles.add(new Van("Van","FURG36l", 5000, true, 50200, (short)200, "#FA8072"));
+            listVehicles.add(new Van("Van","FURG25j", 5000, true, 50200, (short)200, "#F08080"));
+            listVehicles.add(new Van("Van","FURG35t", 5000, true, 50200, (short)200, "#FA8072"));
+
         }
 
 
@@ -136,6 +153,17 @@ public class VehicleManagementService {
         }
 
         return (double) totalHours / count; // Calcular promedio
+    }
+
+
+    public List<AbstractVehicle> getVehiclesByColor(String color) {
+        List<AbstractVehicle> result = new ArrayList<>();
+        for (AbstractVehicle vehicle: listVehicles ) {
+            if (vehicle.getColor().equalsIgnoreCase(color)) {
+                result.add(vehicle);
+            }
+        }
+        return result;
     }
 
 }

@@ -4,8 +4,8 @@ public class Motorbike extends AbstractVehicle {
 
     private boolean helmet; //casco
 
-    public Motorbike(String typeVehicle, String tuition, int km, boolean status, double rentalValue, boolean helmet) {
-        super(typeVehicle, tuition, km, status, rentalValue);
+    public Motorbike(String typeVehicle, String tuition, int km, boolean status, double rentalValue, boolean helmet, String color) {
+        super(typeVehicle, tuition, km, status, rentalValue, color);
         this.helmet = helmet;
         super.setTypeVehicle("Motorbike");
     }
